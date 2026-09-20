@@ -16,9 +16,29 @@
         function multiply (num1, num2){
             return (num1*num2);
         }
+        function capitalize (string){
+            //start by making the entire string lower case
+            const temp = string.toLowerCase();
+
+            //then raise tha cahracter at position 0 to be upper case
+            const char0 = temp.charAt(0).toUpperCase();
+
+            //only necessary for testing
+            /*
+            console.log(char0);
+            console.log(temp.slice(1));
+            console.log(char0 + temp.slice(1));
+            */
+
+            //using the slice() method, combine the capitalised first letter, and the rest of the string.
+            return (char0 + temp.slice(1));
+        }
 
         console.log(add7(10));
         console.log(multiply(3,2));
+        console.log(capitalize("abcd"));
+        console.log(capitalize("ABCD"));
+        console.log(capitalize("aBcD"));
     </script>
 </body>
 </html>
